@@ -1,0 +1,3 @@
+require("sadegh")
+
+print("hello")
