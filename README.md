@@ -1,4 +1,4 @@
-# vichare
+# vi-gari
 my neovim config from scratch
 
 ## binding
