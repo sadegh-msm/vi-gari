@@ -1,3 +1,3 @@
 require("sadegh.remap")
+require("sadegh.set")
 
-print("hello from sadegh")
