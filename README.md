@@ -34,12 +34,11 @@ my neovim config from scratch
 
 ### undotree
 `<leader>pv` open the undotree pane
->>>>>>> def191e (add keymaps and lsp)
 
 ### harpoon
 `<leader>a` add file to harpoon  
 `<C-e>` harpoon quick menu  
-`<C-h>` file 1  
+`<C-y>` file 1  
 `<C-t>` file 2  
 `<C-n>` file 3  
 `<C-s>` file 4  
@@ -48,3 +47,6 @@ my neovim config from scratch
 `<leader>ff` find files  
 `<leader>ps` grep inside file  
 `<C-p>` find inside git  
+
+### nvim-tree
+`<leader>pe` toggle nvim tree
