@@ -7,6 +7,10 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
+    -- Automatically closes brackets and quotes
+    use 'm4xshen/autoclose.nvim'
+
+    -- Alpha-nvim provides a customizable start screen for neovim
     use {
         'goolord/alpha-nvim',
         config = function ()
@@ -14,21 +18,25 @@ return require('packer').startup(function(use)
         end
     }
 
+    -- Lualine, a statusline plugin that's easy to configure and customize
     use {
       'nvim-lualine/lualine.nvim',
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
+    -- Telescope, a highly extendable fuzzy finder over lists
     use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.4',
 		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
+    -- ToggleTerm, for easy management of terminal windows within Neovim
     use {"akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
     end}
 
+    -- Nvim-tree, a file explorer tree for navigating the filesystem
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
@@ -36,6 +44,7 @@ return require('packer').startup(function(use)
         },
     }
 
+    -- Rose-pine theme, a comfortable and easy-on-the-eyes color scheme
     use({
         'rose-pine/neovim',
         as = 'rose-pine',
@@ -44,11 +53,19 @@ return require('packer').startup(function(use)
         end
     })
 
+    -- Nvim-treesitter, for syntax highlighting, indentation, and more, based on tree-sitter
     use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+
+    -- Harpoon, for quick navigation to files, buffers, etc.
     use( 'theprimeagen/harpoon' )
+
+    -- Undotree, for visualizing vim's undo tree
     use( 'mbbill/undotree' )
+
+    -- Vim-fugitive, a Git wrapper that adds many Git commands to Neovim
     use( 'tpope/vim-fugitive' )
 
+    -- LSP-Zero, an easy-to-setup configuration for Neovim LSP (Language Server Protocol)
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
