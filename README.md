@@ -50,3 +50,11 @@ my neovim config from scratch
 
 ### nvim-tree
 `<leader>pe` toggle nvim tree
+
+### terminal
+`<leader>t` opens a floating teminal window
+`<leader>th` opens horizontal terminal window
+`<leader>tv` opens vertical terminal window
+`<C-a>` close the window
+`<C-hjkl>` move from the window
+`<leader>tt` go back to the last terminal window
