@@ -10,6 +10,9 @@ return require('packer').startup(function(use)
     -- Automatically closes brackets and quotes
     use 'm4xshen/autoclose.nvim'
 
+    -- Lsp-based format for code
+    use { "elentok/format-on-save.nvim" }
+
     -- Alpha-nvim provides a customizable start screen for neovim
     use {
         'goolord/alpha-nvim',
