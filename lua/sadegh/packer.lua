@@ -4,11 +4,14 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-	-- Packer can manage itself
-	use 'wbthomason/packer.nvim'
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
     -- Automatically closes brackets and quotes
     use 'm4xshen/autoclose.nvim'
+
+    -- Add bufferline on top of the screen
+    use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
 
     -- Lsp-based format for code
     use { "elentok/format-on-save.nvim" }
@@ -16,28 +19,28 @@ return require('packer').startup(function(use)
     -- Alpha-nvim provides a customizable start screen for neovim
     use {
         'goolord/alpha-nvim',
-        config = function ()
-            require'alpha'.setup(require'alpha.themes.dashboard'.config)
+        config = function()
+            require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
         end
     }
 
     -- Lualine, a statusline plugin that's easy to configure and customize
     use {
-      'nvim-lualine/lualine.nvim',
-      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
     -- Telescope, a highly extendable fuzzy finder over lists
     use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.4',
-		-- or                            , branch = '0.1.x',
-		requires = { {'nvim-lua/plenary.nvim'} }
-	}
+        'nvim-telescope/telescope.nvim', tag = '0.1.4',
+        -- or                            , branch = '0.1.x',
+        requires = { { 'nvim-lua/plenary.nvim' } }
+    }
 
     -- ToggleTerm, for easy management of terminal windows within Neovim
-    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+    use { "akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
-    end}
+    end }
 
     -- Nvim-tree, a file explorer tree for navigating the filesystem
     use {
@@ -57,16 +60,16 @@ return require('packer').startup(function(use)
     })
 
     -- Nvim-treesitter, for syntax highlighting, indentation, and more, based on tree-sitter
-    use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
     -- Harpoon, for quick navigation to files, buffers, etc.
-    use( 'theprimeagen/harpoon' )
+    use('theprimeagen/harpoon')
 
     -- Undotree, for visualizing vim's undo tree
-    use( 'mbbill/undotree' )
+    use('mbbill/undotree')
 
     -- Vim-fugitive, a Git wrapper that adds many Git commands to Neovim
-    use( 'tpope/vim-fugitive' )
+    use('tpope/vim-fugitive')
 
     -- LSP-Zero, an easy-to-setup configuration for Neovim LSP (Language Server Protocol)
     use {
@@ -74,22 +77,21 @@ return require('packer').startup(function(use)
         branch = 'v1.x',
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
+            { 'neovim/nvim-lspconfig' },
+            { 'williamboman/mason.nvim' },
+            { 'williamboman/mason-lspconfig.nvim' },
 
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-buffer'},
-            {'hrsh7th/cmp-path'},
-            {'saadparwaiz1/cmp_luasnip'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/cmp-nvim-lua'},
+            { 'hrsh7th/nvim-cmp' },
+            { 'hrsh7th/cmp-buffer' },
+            { 'hrsh7th/cmp-path' },
+            { 'saadparwaiz1/cmp_luasnip' },
+            { 'hrsh7th/cmp-nvim-lsp' },
+            { 'hrsh7th/cmp-nvim-lua' },
 
             -- Snippets
-            {'L3MON4D3/LuaSnip'},
-            {'rafamadriz/friendly-snippets'},
+            { 'L3MON4D3/LuaSnip' },
+            { 'rafamadriz/friendly-snippets' },
         }
     }
-
 end)
