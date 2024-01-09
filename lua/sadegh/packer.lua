@@ -13,6 +13,8 @@ return require('packer').startup(function(use)
     -- Add bufferline on top of the screen
     use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
 
+    use "folke/which-key.nvim"
+
     -- Lsp-based format for code
     use { "elentok/format-on-save.nvim" }
 
