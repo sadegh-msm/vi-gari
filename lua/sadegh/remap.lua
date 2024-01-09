@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- select all in file
+vim.api.nvim_set_keymap('n', '<leader>af', 'ggVG', { noremap = true, silent = true })
+
 -- In visual mode, move the selected block of text down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 -- In visual mode, move the selected block of text up
@@ -54,5 +57,5 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
--- format the file 
+-- format the file
 vim.keymap.set("n", "<leader>cc", "=G")
