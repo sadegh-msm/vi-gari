@@ -74,16 +74,16 @@ After installation, open Neovim and the plugins will be automatically installed 
 - `<leader>pe` toggle nvim tree
 
 ### terminal
-- `<leader>t` opens a floating teminal window
+- `<leader>t` opens a floating terminal window
 - `<leader>th` opens horizontal terminal window
 - `<leader>tv` opens vertical terminal window
 - `<C-a>` close the window
 - `<C-hjkl>` move from the window
-- `<leader>tt` go back to the last terminal windowFor more detailed descriptions of key bindings and configurations, refer to the comments within the configuration files.
+- `<leader>tt` go back to the last terminal window For more detailed descriptions of key bindings and configurations, refer to the comments within the configuration files.
 
 ### comments
-- `gc` to comment the selected text in visuall 
-- `gb` to comment in viual mode with block
+- `gc` to comment the selected text in visual 
+- `gb` to comment in visual mode with block
 - `gcc` comment one line in normal mode
 
 ## Customization
