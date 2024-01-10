@@ -10,6 +10,9 @@ return require('packer').startup(function(use)
     -- Automatically closes brackets and quotes
     use 'm4xshen/autoclose.nvim'
 
+    -- Smooth scrolling
+    use 'karb94/neoscroll.nvim'
+
     -- Add bufferline on top of the screen
     use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
 
@@ -17,6 +20,9 @@ return require('packer').startup(function(use)
 
     -- Lsp-based format for code
     use { "elentok/format-on-save.nvim" }
+
+    -- comment support
+    use { 'numToStr/Comment.nvim' }
 
     -- Alpha-nvim provides a customizable start screen for neovim
     use {

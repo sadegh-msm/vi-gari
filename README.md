@@ -57,10 +57,13 @@ After installation, open Neovim and the plugins will be automatically installed 
 ### harpoon
 - `<leader>a` add file to harpoon  
 - `<C-e>` harpoon quick menu  
-- `<C-y>` file 1  
-- `<C-t>` file 2  
-- `<C-n>` file 3  
-- `<C-s>` file 4  
+- `<leader>1` file 1  
+- `<leader>2` file 2  
+- `<leader>3` file 3  
+- `<leader>4` file 4  
+- `<leader>5` file 5  
+- `<leader>6` file 6  
+- `<leader>7` file 7  
 
 ### telescope
 - `<leader>ff` find files  
@@ -77,6 +80,11 @@ After installation, open Neovim and the plugins will be automatically installed 
 - `<C-a>` close the window
 - `<C-hjkl>` move from the window
 - `<leader>tt` go back to the last terminal windowFor more detailed descriptions of key bindings and configurations, refer to the comments within the configuration files.
+
+### comments
+- `gc` to comment the selected text in visuall 
+- `gb` to comment in viual mode with block
+- `gcc` comment one line in normal mode
 
 ## Customization
 
