@@ -4,10 +4,20 @@ local formatters = require("format-on-save.formatters")
 format_on_save.setup({
     exclude_path_patterns = {
         "/node_modules/",
-        ".local/share/nvim/lazy",
+        ".tex",
+        ".md"
     },
     formatter_by_ft = {
         -- Standard formatters
+        tex = {
+            formatters.custom({
+                format = function(lines)
+                    -- Example: Simply return the lines without modification
+                    -- Replace with actual formatting logic if needed
+                    return lines
+                end
+            })
+        },
         css = formatters.lsp,
         html = formatters.lsp,
         java = formatters.lsp,
@@ -30,16 +40,6 @@ format_on_save.setup({
         typescriptreact = formatters.prettierd,
         yaml = formatters.lsp,
 
-        -- Custom and Conditional formatters
-        myfiletype = formatters.shell({ cmd = { "myformatter", "%" } }),
-        filetype1 = formatters.remove_trailing_whitespace,
-        filetype2 = formatters.custom({
-            format = function(lines)
-                return vim.tbl_map(function(line)
-                    return line:gsub("true", "false")
-                end, lines)
-            end
-        }),
         go = {
             formatters.shell({
                 cmd = { "goimports-reviser", "-rm-unused", "-set-alias", "-format", "%" },
@@ -48,23 +48,6 @@ format_on_save.setup({
                 end
             }),
             formatters.shell({ cmd = { "gofmt" } }),
-        },
-        javascript = {
-            formatters.if_file_exists({
-                pattern = ".eslintrc.*",
-                formatter = formatters.eslint_d_fix
-            }),
-            formatters.if_file_exists({
-                pattern = { ".prettierrc", ".prettierrc.*", "prettier.config.*" },
-                formatter = formatters.prettierd,
-            }),
-            formatters.if_file_exists({
-                pattern = ".prettierrc",
-                formatter = formatters.prettierd,
-                stop_path = function()
-                    return "/my/custom/stop/path"
-                end
-            }),
         },
     },
 
