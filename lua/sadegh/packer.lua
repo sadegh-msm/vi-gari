@@ -13,6 +13,9 @@ return require('packer').startup(function(use)
     -- Smooth scrolling
     use 'karb94/neoscroll.nvim'
 
+    -- Media support
+    use { 'edluffy/hologram.nvim' }
+
     -- Add bufferline on top of the screen
     use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
 
