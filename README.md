@@ -61,9 +61,8 @@ After installation, open Neovim and the plugins will be automatically installed 
 - `<leader>2` file 2  
 - `<leader>3` file 3  
 - `<leader>4` file 4  
-- `<leader>5` file 5  
-- `<leader>6` file 6  
-- `<leader>7` file 7  
+- `<leader>ts` opens up a tmux session
+- `<leader>tr` opens up a terminal page
 
 ### telescope
 - `<leader>ff` find files  
@@ -85,6 +84,17 @@ After installation, open Neovim and the plugins will be automatically installed 
 - `gc` to comment the selected text in visual 
 - `gb` to comment in visual mode with block
 - `gcc` comment one line in normal mode
+
+### barbar (bufferline manager)
+- `<A-,>` go to last buffer
+- `<A-.>` go to next buffer
+- `<A-l>` swap buffer left
+- `<A-;>` swap buffer right
+- `<A-a>` go to buffer 1
+- `<A-s>` go to buffer 2
+- `<A-p>` pin a buffer
+- `<A-d>` close a buffer
+- `<leader>cb` close all buffers 
 
 ## Customization
 

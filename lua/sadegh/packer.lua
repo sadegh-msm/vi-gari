@@ -7,6 +7,8 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    use 'nvim-tree/nvim-web-devicons'
+
     -- Automatically closes brackets and quotes
     use 'm4xshen/autoclose.nvim'
 
@@ -16,9 +18,7 @@ return require('packer').startup(function(use)
     -- Media support
     use { 'edluffy/hologram.nvim' }
 
-    -- Add bufferline on top of the screen
-    use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
-
+    -- press leader for showing the next steps
     use "folke/which-key.nvim"
 
     -- Lsp-based format for code
@@ -81,6 +81,10 @@ return require('packer').startup(function(use)
 
     -- Vim-fugitive, a Git wrapper that adds many Git commands to Neovim
     use('tpope/vim-fugitive')
+
+    -- barbar, for bufferline
+    use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
+    use 'romgrk/barbar.nvim'
 
     -- LSP-Zero, an easy-to-setup configuration for Neovim LSP (Language Server Protocol)
     use {
