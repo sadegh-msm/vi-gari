@@ -5,7 +5,9 @@ format_on_save.setup({
     exclude_path_patterns = {
         "/node_modules/",
         ".tex",
-        ".md"
+        ".md",
+        ".zshrc",
+        ".conf"
     },
     formatter_by_ft = {
         -- Standard formatters
