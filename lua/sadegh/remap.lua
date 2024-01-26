@@ -13,7 +13,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "J", "mzJ`z")
 
 -- Scroll down half a page and center the screen
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-l>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Move to the next search result and center the screen
@@ -33,6 +33,15 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 vim.keymap.set("n", "Q", "<nop>")
+
+-- Tab functionality
+vim.keymap.set("n", "<TAB>", ">>")
+vim.keymap.set("n", "<S-TAB>", "<<")
+vim.keymap.set("v", "<TAB>", ">gv")
+vim.keymap.set("v", "<S-TAB>", "<gv")
+
+-- insert new line in insert mode
+vim.keymap.set("i", "<C-n>", "<esc>O")
 
 -- Open a new Tmux window with tmux-sessionizer
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")

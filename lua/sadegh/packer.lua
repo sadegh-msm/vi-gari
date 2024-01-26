@@ -86,6 +86,9 @@ return require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
     use 'romgrk/barbar.nvim'
 
+    use 'ray-x/go.nvim'
+    use 'ray-x/guihua.lua' -- recommended if need floating window support
+
     -- LSP-Zero, an easy-to-setup configuration for Neovim LSP (Language Server Protocol)
     use {
         'VonHeikemen/lsp-zero.nvim',

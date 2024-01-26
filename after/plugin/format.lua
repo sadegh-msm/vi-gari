@@ -7,19 +7,10 @@ format_on_save.setup({
         ".tex",
         ".md",
         ".zshrc",
-        ".conf"
+        ".conf",
+        ".go"
     },
     formatter_by_ft = {
-        -- Standard formatters
-        tex = {
-            formatters.custom({
-                format = function(lines)
-                    -- Example: Simply return the lines without modification
-                    -- Replace with actual formatting logic if needed
-                    return lines
-                end
-            })
-        },
         css = formatters.lsp,
         html = formatters.lsp,
         java = formatters.lsp,
@@ -42,15 +33,15 @@ format_on_save.setup({
         typescriptreact = formatters.prettierd,
         yaml = formatters.lsp,
 
-        go = {
-            formatters.shell({
-                cmd = { "goimports-reviser", "-rm-unused", "-set-alias", "-format", "%" },
-                tempfile = function()
-                    return vim.fn.expand("%") .. '.formatter-temp'
-                end
-            }),
-            formatters.shell({ cmd = { "gofmt" } }),
-        },
+    --     go = {
+    --         formatters.shell({
+    --             cmd = { "goimports-reviser", "-rm-unused", "-set-alias", "-format", "%" },
+    --             tempfile = function()
+    --                 return vim.fn.expand("%") .. '.formatter-temp'
+    --             end
+    --         }),
+    --         formatters.shell({ cmd = { "gofmt" } }),
+    --     },
     },
 
     -- Fallback formatter
