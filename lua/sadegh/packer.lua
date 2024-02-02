@@ -18,6 +18,38 @@ return require('packer').startup(function(use)
     -- Smooth scrolling
     use 'karb94/neoscroll.nvim'
 
+    -- install and upgrade third party tools automatically
+    use({
+        'WhoIsSethDaniel/mason-tool-installer.nvim',
+        requires = { 'williamboman/mason.nvim' },
+    })
+
+    use "nvimtools/none-ls.nvim"
+
+    -- extension to mason.nvim that makes it easier
+    -- to use lspconfig with mason.nvim
+    use({
+        'williamboman/mason-lspconfig.nvim',
+        requires = {
+            'williamboman/mason.nvim',
+            'neovim/nvim-lspconfig',
+            'hrsh7th/cmp-nvim-lsp',
+            'simrat39/rust-tools.nvim',
+        },
+        after = {
+            'nvim-lspconfig',
+            'nvim-cmp',
+        },
+    })
+
+    use({
+        'j-hui/fidget.nvim',
+        requires = {
+            'neovim/nvim-lspconfig',
+        },
+        opts = {},
+    })
+
     -- Media support
     use { 'edluffy/hologram.nvim' }
 

@@ -1,0 +1,44 @@
+-- local cmp = require('cmp')
+-- local lspkind = require('lspkind')
+--
+-- cmp.setup({
+--     completion = {
+--         autocomplete = false,
+--     },
+--     view = {
+--         entries = 'custom',
+--     },
+--     mapping = {
+--         ['<down>'] = cmp.mapping(cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }), { 'i', 's' }),
+--         ['<up>'] = cmp.mapping(cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }), { 'i', 's' }),
+--         ['<c-space>'] = cmp.mapping(cmp.mapping.complete({}), { 'i' }),
+--         ['<cr>'] = cmp.mapping(cmp.mapping.confirm({ select = true }), { 's', 'i', 'c' }),
+--     },
+--     formatting = {
+--         format = lspkind.cmp_format({
+--             -- show only symbol annotations
+--             mode = 'symbol_text',
+--             -- prevent the popup from showing more than provided characters
+--             -- (e.g 50 will not show more than 50 characters)
+--             maxwidth = 50,
+--         }),
+--     },
+--     window = {
+--         completion = {
+--             side_padding = 0,
+--             winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:PmenuSel',
+--             scrollbar = true,
+--             border = 'rounded',
+--         },
+--         documentation = {
+--             border = 'rounded',
+--             winhighlight = 'Normal:CmpDoc',
+--         },
+--     },
+--     sources = cmp.config.sources({
+--         { name = 'nvim_lsp' },
+--         { name = 'luasnip' },
+--     }, {
+--         { name = 'buffer' },
+--     }),
+-- })
