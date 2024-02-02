@@ -68,3 +68,12 @@ end)
 
 -- format the file
 vim.keymap.set("n", "<leader>cc", "=G")
+
+-- golang error handling
+vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<esc>Oreturn err<esc>")
+
+-- change all words 
+vim.keymap.set("v", "<leader>ca", "\"*y:%s/<C-r>\"*//gc<left><left><left>")
+
+-- select word under cursor
+vim.keymap.set("n", "<leader>w", "viw")

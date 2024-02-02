@@ -9,6 +9,9 @@ return require('packer').startup(function(use)
 
     use 'nvim-tree/nvim-web-devicons'
 
+    -- ansible support
+    use 'pearofducks/ansible-vim'
+
     -- Automatically closes brackets and quotes
     use 'm4xshen/autoclose.nvim'
 
@@ -60,6 +63,9 @@ return require('packer').startup(function(use)
             'nvim-tree/nvim-web-devicons', -- optional
         },
     }
+
+    -- Helm support
+    use('towolf/vim-helm')
 
     -- Rose-pine theme, a comfortable and easy-on-the-eyes color scheme
     use({
