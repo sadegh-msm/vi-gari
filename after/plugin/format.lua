@@ -9,7 +9,8 @@ format_on_save.setup({
         ".zshrc",
         ".conf",
         ".go",
-        "Dockerfile"
+        "Dockerfile",
+        ".txt"
     },
     formatter_by_ft = {
         css = formatters.lsp,

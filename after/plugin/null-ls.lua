@@ -1,8 +1,4 @@
--- https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md
 local null_ls = require('null-ls')
-
--- cspell is installed in the lang/plugins.
--- local cspell = require('cspell')
 
 return {
   null_ls.builtins.code_actions.shellcheck,
